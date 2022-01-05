@@ -9,7 +9,7 @@ The backend server is using .NET 5.0 and the frontend client is using Angular 10
 
 1. When clicking on a Cheese card, open a [Dialog](https://material.angular.io/components/dialog/examples) that contains all the details of the card, including the item's **description**.
     
-   - The cheese details like **description** and **category** can be viewed by clicking on cheese card. 
+ - The cheese details like **description** and **category** can be viewed by clicking on cheese card. 
 
 2. Add a **Purchase** button to the Cart (In the sliding view that opens when you click the 'View Cart' button). Clicking on the **Purchase** button will send all items in the cart to the server (backend) and store them for later use (You are not required to use a Database in this exercise, but you may do so if you wish).
 
