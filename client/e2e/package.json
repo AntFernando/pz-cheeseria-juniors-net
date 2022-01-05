@@ -4,11 +4,15 @@
   "description": "A repository using cypress to test the pz cheeseria",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open",
+    "run": "cypress run"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^7.6.0"
+    "cypress": "^7.7.0"
+  },
+  "dependencies": {
+    "D": "^1.0.0"
   }
 }

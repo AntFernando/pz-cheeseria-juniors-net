@@ -47,6 +47,7 @@ label {
   margin-bottom: 15px;
   padding: 0 20px;
   margin-top: 40px;
+
   }
 
   .dropdown-menu .cart-list::-webkit-scrollbar {
@@ -73,6 +74,7 @@ label {
   }
 
   .dropdown-menu .cart-list .product-widget .product-body{
+   
     
   }
 

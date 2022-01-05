@@ -1,0 +1,70 @@
+<div class="modal-header">
+
+  <h4 class="modal-title" id="modal-basic-title">Recent Purchase History</h4>
+
+  <button class="close" mat-button (click)="onNoClick()" data-cy="modal-btn-close"> <span
+      aria-hidden="true">×</span></button>
+
+</div>
+<div id="dialog-window" data-cy="'scrollable-content'">
+
+  <div class="
+              no-item
+              w-100
+              d-flex
+              justify-content-center
+              align-items-center
+              flex-column
+            " *ngIf="purchasedItemsCount === 0">
+    <span><img src="../../assets/img/nothing_to_see.png" alt="" class="nothing-img" /></span>
+    <span class="nothing-top-text mt-2 font-weight-bold">Nothing to see here!</span>
+    <span class="nothing-small-text">Purchase items and then find them here.</span>
+  </div>
+
+  <div class="modal-body">
+    <div id="scrollable-content" *ngIf="purchasedItemsCount !== 0">
+      <ul class="list-group" *ngFor="let purchasedItems of purchasedItemslist; let i=index;">
+        <li data-cy="purchase-list" class="list-group-item d-flex justify-content-between align-items-center border-0">
+
+          <!-- <span class="badge badge-primary badge-pill">14</span> -->
+          <table class="table table-bordered">
+            <br>
+            <thead>
+              <tr>
+                <!-- <th scope="col">#</th> -->
+                <th scope="col">Purchase Id: {{purchasedItems.purchaseId}}</th>
+                <th scope="col">Purchase Date: {{purchasedItems.purchasedDate | date: 'dd/MM/yyyy HH:mm a'}}</th>
+                <th scope="col">Total Price: {{purchasedItems.totalPrice}}</th>
+              </tr>
+            </thead>
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Cheese</th>
+                <th scope="col">Qty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cheese of purchasedItemslist[i].cheeseDetails; let j=index;">
+                <th scope="row">{{j+1}}</th>
+                <td [attr.data-cy]="'purchased-cheese-id-' + cheese.id"> {{cheese.title}}</td>
+                <td> {{cheese.cheeseQty}}</td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+
+        </li>
+
+
+      </ul>
+
+    </div>
+  </div>
+
+
+
+  <div id="footer">
+  </div>

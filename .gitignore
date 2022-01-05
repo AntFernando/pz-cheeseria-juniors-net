@@ -11,6 +11,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+purchase.json
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -434,3 +435,4 @@ testem.log
 .DS_Store
 Thumbs.db
 client/dist
+/backend/src/purchase.json
